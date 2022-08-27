@@ -1,0 +1,36 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap);
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 0.625em;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  text-rendering: optimizeSpeed;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+
+  -webkit-tap-highlight-color: transparent;
+  color: var(--black-text);
+}
+
+body {
+  font-family: var(--user-ff);
+  font-size: var(--user-fz);
+  font-weight: var(--user-fw);
+  line-height: var(--user-lh);
+
+  min-height: 100vh;
+
+  color: inherit;
+  background-color: var(--white-bg);
+
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
