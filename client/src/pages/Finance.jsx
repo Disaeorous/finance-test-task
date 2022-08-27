@@ -1,11 +1,8 @@
 import { useEffect, useState } from 'react';
 import { socket } from '../data/socketIO';
 
-<<<<<<< HEAD
 import { Stocks } from '../components/Stocks';
 
-=======
->>>>>>> 399e79fb0e7eff180c2643e890e6943f55a1013e
 export const Finance = () => {
   const [tickers, setTickers] = useState([]);
 
@@ -27,20 +24,12 @@ export const Finance = () => {
       });
       socket.close();
     };
-<<<<<<< HEAD
   }, [setTickers]);
 
   return (
     <>
       <Stocks></Stocks>
       {/* {console.log(tickers)}
-=======
-  }, [socket]);
-
-  return (
-    <div>
-      {console.log(tickers)}
->>>>>>> 399e79fb0e7eff180c2643e890e6943f55a1013e
       {tickers &&
         tickers.map((ticker, index) => {
           return (
@@ -58,12 +47,7 @@ export const Finance = () => {
               <p>{ticker.last_trade_time}</p>
             </div>
           );
-<<<<<<< HEAD
         })} */}
     </>
-=======
-        })}
-    </div>
->>>>>>> 399e79fb0e7eff180c2643e890e6943f55a1013e
   );
 };
