@@ -1,3 +1,9 @@
+import { Finance } from './pages/Finance';
+
 export const App = () => {
-  return <div>Hi</div>;
+  return (
+    <div>
+      <Finance />
+    </div>
+  );
 };
