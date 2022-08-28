@@ -1,4 +1,7 @@
-export const Exchange = ({ children }) => {
+import { Exchange as ExchangeList } from './exchangeStyles';
+import { Ticker, Headings } from '../Ticker';
+
+export const Exchange = () => {
   const dummyStock = [
     {
       ticker: 'AAPL',
@@ -62,5 +65,13 @@ export const Exchange = ({ children }) => {
     },
   ];
 
-  return <section className='exchange'>Exchange{children}</section>;
+  return (
+    <ExchangeList>
+      <Headings />
+
+      {dummyStock.map((ticker, index) => {
+        return <Ticker key={index} {...ticker} stock_yield={ticker.yield} />;
+      })}
+    </ExchangeList>
+  );
 };
