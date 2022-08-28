@@ -6,10 +6,10 @@ export const Ticker = (props) => {
     exchange,
     price,
     change,
-    change_percent,
+    change_percent: changePercent,
     dividend,
-    stock_yield,
-    last_trade_time,
+    yield: stockYield,
+    last_trade_time: lastTrade,
   } = props;
 
   return (
@@ -27,16 +27,16 @@ export const Ticker = (props) => {
         <span style={{ color: 'var(--green-border)' }}>{change}</span>
       </Data>
       <Data>
-        <Percent style={{ width: 'auto', maxWidth: '9.5rem' }}>{change_percent}</Percent>
+        <Percent style={{ width: 'auto', maxWidth: '9.5rem' }}>{changePercent}</Percent>
       </Data>
       <Data>
         <span>{dividend}</span>
       </Data>
       <Data>
-        <span>{stock_yield}</span>
+        <span>{stockYield}</span>
       </Data>
       <Data>
-        <span>{last_trade_time}</span>
+        <span>{lastTrade}</span>
       </Data>
     </TickerItem>
   );
