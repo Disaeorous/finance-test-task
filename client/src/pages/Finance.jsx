@@ -20,7 +20,7 @@ export const Finance = () => {
 
     return () => {
       socket.on('disconnect', function () {
-        console.log('disconnected to server');
+        console.log('disconnected to server r');
       });
       socket.close();
     };
