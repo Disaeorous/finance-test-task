@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setStocks, pending, error } from '../../../redux/stockSlice';
 import { socket } from '../../../data/socketIO';
@@ -15,6 +15,7 @@ import { Ticker, Headings } from '../Ticker';
 //   }
 // };
 
+// TODO: Refactor this component
 export const Exchange = () => {
   const stock = useSelector((state) => state.stock);
   const dispatch = useDispatch();
@@ -39,6 +40,17 @@ export const Exchange = () => {
   return (
     <ExchangeList>
       <Headings />
+
+      {console.log(stock)}
+      {/* {Object.keys(stock).map((ticker, index) => {
+        return (
+          <React.Fragment key={index}>
+            {stock[ticker].map((item, index) => {
+              return <Ticker key={index} {...item} />;
+            })}
+          </React.Fragment>
+        );
+      })} */}
 
       {stock.map((ticker, index) => {
         return <Ticker key={index} {...ticker} />;
