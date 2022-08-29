@@ -9,14 +9,6 @@
   align-items: center;
 }
 
-.chart__title {
-  font-size: 2rem;
-  line-height: 1.5;
-  text-transform: uppercase;
-
-  color: var(--black-text);
-}
-
 .btn {
   padding: 1rem;
   border: 1px solid var(--black-border);
