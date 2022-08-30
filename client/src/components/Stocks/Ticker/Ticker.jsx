@@ -1,3 +1,4 @@
+import React from 'react';
 import { Ticker as TickerItem, Data, Percent, StockSymbol } from './tickerStyles';
 import { screenSize } from '../../../styles/globals/layouts/breakpoints';
 import { formatCurrency, formatDate } from '../../../utils';
